@@ -1626,6 +1626,13 @@
   dependencies:
     "@react-pdf-viewer/core" "3.6.0"
 
+"@react-pdf-viewer/highlight@^3.7.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@react-pdf-viewer/highlight/-/highlight-3.8.0.tgz#f386e447edb530b13648b29901f89f196c590f66"
+  integrity sha512-2RrrtgxIz8M8uzfaotmfRJ1QWezJdtCAHh/k0rMP33D7I+oehBWnADjfPXW86jOI/NMxe181kevoUMGGeR5q2Q==
+  dependencies:
+    "@react-pdf-viewer/core" "3.8.0"
+
 "@react-pdf-viewer/open@3.6.0":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@react-pdf-viewer/open/-/open-3.6.0.tgz#509736926329f8885845e22f3a6dbef4a6b774ae"

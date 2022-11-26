@@ -29,8 +29,8 @@ const ConfirmationModal = ({ store }) => {
                                 marginBottom: '0.5rem',
                             }}
                         >
-                            <div>Are you sure that you want to follow this link</div>
-                            <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}>{target}</span>?
+                            <h3>Are you sure that you want to follow this link?</h3>
+                            <span style={{textDecoration: 'underline', color: 'teal' }}>{target}</span>
                         </div>
                         <div
                             style={{

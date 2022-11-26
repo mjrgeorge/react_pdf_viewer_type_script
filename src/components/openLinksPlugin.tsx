@@ -1,14 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import type { Plugin } from '@react-pdf-viewer/core';
 import { createStore } from '@react-pdf-viewer/core';
 import * as React from 'react';
 
 import ConfirmationModal from './ConfirmationModal';
 
-const openLinksPlugin = (): Plugin => {
+const openLinksPlugin = () => {
     const store = React.useMemo(() => createStore({}), []);
 
-    const handleClick = (e: Event) => {
+    const handleClick = (e) => {
         e.preventDefault();
         const href = (e.target).href;
         store.update('clickedTarget', href);
