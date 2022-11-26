@@ -1,27 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import * as React from 'react';
+import type { Plugin } from '@react-pdf-viewer/core';
 import { createStore } from '@react-pdf-viewer/core';
-import type { Plugin, PluginOnAnnotationLayerRender, RenderViewer, Slot } from '@react-pdf-viewer/core';
+import * as React from 'react';
 
 import ConfirmationModal from './ConfirmationModal';
-import StoreProps from './StoreProps';
 
 const openLinksPlugin = (): Plugin => {
-    const store = React.useMemo(() => createStore<StoreProps>({}), []);
+    const store = React.useMemo(() => createStore({}), []);
 
     const handleClick = (e: Event) => {
         e.preventDefault();
-        const href = (e.target as HTMLLinkElement).href;
+        const href = (e.target).href;
         store.update('clickedTarget', href);
     };
 
-    const findLinks = (e: PluginOnAnnotationLayerRender) => {
+    const findLinks = (e) => {
         e.container.querySelectorAll('a[data-target="external"]').forEach((link) => {
             link.addEventListener('click', handleClick);
         });
     };
 
-    const renderViewer = (renderViewerProps: RenderViewer): Slot => {
+    const renderViewer = (renderViewerProps) => {
         const currentSlot = renderViewerProps.slot;
         if (currentSlot.subSlot) {
             currentSlot.subSlot.children = (

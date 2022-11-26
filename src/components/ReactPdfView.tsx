@@ -3,11 +3,7 @@ import { Viewer, Worker } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
-interface CurrentPageExampleProps {
-    fileUrl: string;
-}
-
-const ReactPdfView: React.FC<CurrentPageExampleProps> = ({ fileUrl }) => {
+const ReactPdfView = ({ fileUrl}) => {
   return (
     <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.11.338/build/pdf.worker.js">
             <div

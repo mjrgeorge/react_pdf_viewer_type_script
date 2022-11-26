@@ -1,8 +1,6 @@
 import './App.css';
 import MyPDF from './components/documents/webviewer-demo.pdf';
-import MyModal from './components/MyModal';
-import OpenConfirmationModalExample from './components/OpenConfirmationModalExample';
-import ReactPdfView from './components/ReactPdfView';
+import OpenConfirmationModal from './components/OpenConfirmationModal';
 
 function App() {
   // const fileUrl = "https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf"
@@ -13,13 +11,13 @@ function App() {
       <h1>
         React PDF Viewer
       </h1>
-      <OpenConfirmationModalExample fileUrl={fileUrl}/>
+      <OpenConfirmationModal fileUrl={fileUrl}/>
+      {/* <br />
+      <br />
+      <MyModal/>
       <br />
       <br />
-      <MyModal fileUrl={fileUrl}/>
-      <br />
-      <br />
-      <ReactPdfView fileUrl={fileUrl}/>
+      <ReactPdfView fileUrl={fileUrl}/> */}
     </div>
   );
 }
